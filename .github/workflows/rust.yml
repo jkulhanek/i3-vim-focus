@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install libs
+      run: sudo apt-get install libxdo-dev
     - name: Build
       run: cargo build --verbose --release
       working-directory: ./i3-vim-focus
